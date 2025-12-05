@@ -1,0 +1,30 @@
+<svg width="540" height="540" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_3875_50)">
+<rect width="540" height="540" rx="99" fill="#16160E"/>
+<path d="M92 236C92 218.327 106.327 204 124 204C141.673 204 156 218.327 156 236V304C156 321.673 141.673 336 124 336C106.327 336 92 321.673 92 304V236Z" fill="#F8FBF8"/>
+<path d="M164 204C199.346 204 228 232.654 228 268V304C228 321.673 213.673 336 196 336C178.327 336 164 321.673 164 304V204Z" fill="#F8FBF8"/>
+<path d="M236 204C271.346 204 300 232.654 300 268V304C300 321.673 285.673 336 268 336C250.327 336 236 321.673 236 304V204Z" fill="#F8FBF8"/>
+<path d="M316 270C316 233.549 345.549 204 382 204C418.451 204 448 233.549 448 270C448 306.451 418.451 336 382 336C345.549 336 316 306.451 316 270Z" fill="#F8FBF8"/>
+</g>
+<defs>
+<filter id="filter0_n_3875_50" x="0" y="0" width="540" height="540" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.25 1.25" stitchTiles="stitch" numOctaves="3" result="noise" seed="8808" />
+<feComponentTransfer in="noise" result="coloredNoise1">
+<feFuncR type="linear" slope="2" intercept="-0.5" />
+<feFuncG type="linear" slope="2" intercept="-0.5" />
+<feFuncB type="linear" slope="2" intercept="-0.5" />
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feComponentTransfer in="noise1Clipped" result="color1">
+<feFuncA type="table" tableValues="0 0.16" />
+</feComponentTransfer>
+<feMerge result="effect1_noise_3875_50">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+</defs>
+</svg>
