@@ -1,0 +1,79 @@
+export default function PortfolioHomepage() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      {/* Navbar */}
+      <nav className="w-full px-6 py-4 flex items-center justify-between border-b border-gray-100">
+        <div className="font-bold text-lg">MonLogo</div>
+        <div className="flex items-center gap-6 text-sm">
+          <a href="#cases" className="hover:opacity-70 transition">Selected works</a>
+          <a href="/about" className="hover:opacity-70 transition">About</a>
+        </div>
+        <button className="px-4 py-2 rounded-xl bg-black text-white text-sm hover:opacity-80 transition">
+          Get in touch
+        </button>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="w-full px-6 py-24 flex flex-col items-center text-center">
+        <h1 className="text-4xl font-bold mb-4">Designer Produit & Service</h1>
+        <p className="text-lg max-w-xl opacity-80 mb-8">
+          Je conçois des services et produits numériques clairs, cohérents et centrés sur les besoins réels.
+        </p>
+        <div className="flex gap-4">
+          <a
+            href="#cases"
+            className="px-6 py-3 rounded-2xl bg-black text-white text-sm hover:opacity-80 transition"
+          >
+            Voir mon travail
+          </a>
+          <button
+            className="px-6 py-3 rounded-2xl border border-black text-sm hover:bg-gray-100 transition"
+          >
+            Contacte-moi
+          </button>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section id="cases" className="px-6 py-16 max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+        {[1, 2, 3].map((num) => (
+          <a
+            key={num}
+            href={`/case-study-${num}`}
+            className="block p-6 rounded-2xl shadow-md hover:shadow-lg transition border border-gray-100"
+          >
+            <div className="h-40 bg-gray-100 rounded-xl mb-4" />
+            <h2 className="text-xl font-semibold mb-2">Case Study {num}</h2>
+            <p className="text-sm opacity-70">
+              Brève description du projet pour donner envie de creuser.
+            </p>
+          </a>
+        ))}
+      </section>
+
+      {/* About Section */}
+      <section className="px-6 py-24 bg-gray-50 text-center">
+        <h3 className="text-2xl font-semibold mb-4">En savoir plus sur moi</h3>
+        <p className="max-w-xl mx-auto text-sm opacity-70 mb-8">
+          Mon approche, ma méthodologie et ce que j'apporte aux équipes et aux projets.
+        </p>
+        <a
+          href="/about"
+          className="px-6 py-3 rounded-2xl bg-black text-white text-sm hover:opacity-80 transition"
+        >
+          Page À propos
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full px-6 py-6 border-t border-gray-100 flex items-center justify-between text-sm">
+        <div className="opacity-60">© 2025 — Metrey</div>
+        <div className="flex gap-6">
+          <a href="/CV.pdf" className="hover:opacity-70 transition">CV</a>
+          <a href="mailto:contact@metrey.fr" className="hover:opacity-70 transition">Email</a>
+          <a href="https://linkedin.com/in/metrey" className="hover:opacity-70 transition">LinkedIn</a>
+        </div>
+      </footer>
+    </div>
+  );
+}
