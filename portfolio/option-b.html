@@ -58,13 +58,148 @@
     /* Footer */
     .footer{border-top:1px solid #eee;padding:22px 0;margin-top:34px;display:flex;align-items:center;justify-content:space-between;gap:10px}
     .sig{height:26px;margin-left:8px;opacity:.95}
-    /* Modal */
-    .modal{display:none;position:fixed;inset:0;align-items:center;justify-content:center;z-index:90}
-    .modal.show{display:flex}
-    .backdrop{position:absolute;inset:0;background:rgba(0,0,0,.42)}
-    .modal-card{position:relative;background:white;padding:18px;border-radius:12px;max-width:540px;width:92%;z-index:91;box-shadow:0 20px 40px rgba(12,16,30,0.15)}
-    .modal-image{height:140px;border-radius:8px;background:linear-gradient(135deg,#fef3c7,#fee2e2);display:block;margin-bottom:12px}
-    .modal-close{position:absolute;right:12px;top:8px;border:0;background:none;font-size:22px;cursor:pointer}
+/* MODAL V2 - two-column premium */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  align-items:center;
+  justify-content:center;
+  z-index:200;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(3px);
+}
+
+/* Card */
+.modal-card{
+  position:relative;
+  background:#ffffff;
+  max-width:900px;
+  width:92%;
+  border-radius:32px;
+  overflow:hidden;
+  z-index:201;
+  display:flex;
+  min-height:380px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.13);
+}
+
+/* Left image column */
+.modal-left{
+  width:40%;
+  background:#fce7f3; /* placeholder */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+}
+
+.modal-left .placeholder{
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg,#f9c5d8,#ff89a8);
+}
+
+/* Right content */
+.modal-right{
+  width:60%;
+  padding:48px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+}
+
+.modal-tag{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:#6b7280;
+  margin-bottom:16px;
+  font-weight:600;
+}
+
+.modal-title{
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size:40px;
+  font-weight:600;
+  margin:0 0 18px 0;
+  color:#111;
+  line-height:1.1;
+}
+
+.modal-text{
+  font-size:16px;
+  color:#444;
+  margin:0 0 28px;
+  max-width:50ch;
+}
+
+/* Buttons row */
+.modal-ctas{
+  display:flex;
+  gap:14px;
+}
+
+.modal-btn{
+  padding:12px 22px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  border:1px solid #111;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-btn.secondary{
+  background:white;
+  color:#111;
+  border-color:#ddd;
+}
+
+/* Close button */
+.modal-close{
+  position:absolute;
+  top:24px;
+  right:24px;
+  background:none;
+  border:0;
+  font-size:24px;
+  cursor:pointer;
+  color:#000;
+}
+
+/* Responsive modal */
+@media(max-width:800px){
+  .modal-card{
+    flex-direction:column;
+  }
+  .modal-left{
+    width:100%;
+    height:200px;
+  }
+  .modal-right{
+    width:100%;
+    padding:32px 28px;
+  }
+  .modal-title{
+    font-size:32px;
+  }
+}
+
     /* Responsive */
     @media (max-width:1000px){
       .hero{flex-direction:column}
@@ -172,35 +307,68 @@
     </footer>
   </div>
 
-  <!-- Modal -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="backdrop" id="backdrop"></div>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-      <button class="modal-close" id="closeModal">×</button>
-      <div class="modal-image" aria-hidden="true"></div>
-      <h3 id="mTitle">Tu penses que ça peut faire une étincelle ?</h3>
-      <p>Envoie-moi un mail ou réserve un meet — je suis disponible pour de nouveaux projets.</p>
-      <div style="display:flex;gap:10px;margin-top:12px">
-        <a class="btn primary" href="mailto:ton.email@example.com">Envoie-moi un mail</a>
-        <a class="btn" href="https://calendly.com/tonprofil" target="_blank">Réserve un meet</a>
-      </div>
+ <!-- MODAL V2 -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="backdrop" id="backdrop"></div>
+
+  <div class="modal-card">
+
+    <!-- Left image placeholder -->
+    <div class="modal-left">
+      <div class="placeholder"></div>
     </div>
+
+    <!-- Right content -->
+    <div class="modal-right">
+
+      <button class="modal-close" id="closeModal">×</button>
+
+      <div class="modal-tag">Let’s chat</div>
+
+      <h2 class="modal-title">Et si on collaborait ?</h2>
+
+      <p class="modal-text">
+        Des questions ou des recommandations à partager ? Peut-être une collaboration ou 
+        un projet à construire ensemble ? Discutons-en dès maintenant !
+      </p>
+
+      <div class="modal-ctas">
+        <a class="modal-btn" href="mailto:ton.email@example.com">
+          Envoie-moi un mail
+        </a>
+        <a class="modal-btn secondary" href="https://calendly.com/tonprofil" target="_blank">
+          Réserve un meet
+        </a>
+      </div>
+
+    </div>
+
   </div>
+</div>
+
 
   <script>
-    (function(){
       // Modal
-      const contactBtn = document.getElementById('contactBtn');
-      const modal = document.getElementById('modal');
-      const closeModal = document.getElementById('closeModal');
-      const backdrop = document.getElementById('backdrop');
+(function(){
+  const openBtn = document.getElementById('contactBtn');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.getElementById('closeModal');
+  const backdrop = document.getElementById('backdrop');
 
-      function openModal(){ modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); }
-      function closeModal(){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); }
+  function openModal(){
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+  }
+  function closeModalFn(){
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+  }
 
-      contactBtn && contactBtn.addEventListener('click', openModal);
-      closeModal && closeModal.addEventListener('click', closeModal);
-      backdrop && backdrop.addEventListener('click', closeModal);
+  openBtn && openBtn.addEventListener('click', openModal);
+  closeBtn && closeBtn.addEventListener('click', closeModalFn);
+  backdrop && backdrop.addEventListener('click', closeModalFn);
+})();
+
 
       // Hamburger (show/hide nav)
       const hamb = document.getElementById('hamb');
