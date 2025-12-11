@@ -35,4 +35,11 @@ nav.nav{display:flex;gap:var(--space-4);align-items:center}
 
 /* utility */
 .container--narrow{max-width:1100px;margin:0 auto}
-@media(max-width:900px){.hero{flex-direction:column}.hero-side{width:100%}.modal-card{flex-direction:column}.modal-left{height:180px;width:100%}.modal-right{width:100%}}
+@media(max-width:900px){
+  .hero{flex-direction:column}
+  .hero-side{width:100%}
+  .modal-card{flex-direction:column}
+  .modal-left{height:180px;width:100%}
+  .modal-right{width:100%}
+}
+
