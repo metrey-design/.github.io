@@ -25,21 +25,10 @@
 
 .side-card-wrapper {
   display: flex;
-  justify-content: flex-end; /* pousse la card à droite */
-}
-
-.side-card {
-  background: #fff;
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  width: 370px; /* taille fixe */
-  max-width: 100%; /* responsive */
-  margin-left: auto; /* pousse la card à droite */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optionnel pour effet chat */
+  flex-direction: column;  /* empile avatar + side-card */
+  align-items: flex-start; /* alignement gauche des éléments à l'intérieur du wrapper */
+  margin-left: auto;       /* pousse le wrapper à droite de l'écran */
+  gap: var(--space-2);     /* espace entre avatar et chatbox */
 }
 
 .avatar {
@@ -48,6 +37,15 @@
   border-radius: 50%;
   background: var(--color-greyscale-200);
   flex-shrink: 0;
+}
+
+.side-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  width: 280px;       /* taille fixe */
+  max-width: 100%;    /* responsive */
 }
 
 
