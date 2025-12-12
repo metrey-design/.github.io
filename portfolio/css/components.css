@@ -7,31 +7,32 @@
    HERO SECTION
 ----------------------------------------------------- */
 .hero-wrap {
-  position: relative; /* nécessaire pour le positionnement absolu de la chatbox */
+  position: relative; /* nécessaire pour le positionnement absolu */
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* PAS center, pour que le texte ne centre pas la chatbox */
+  padding-top: 80px; /* espace sous navbar si nécessaire */
 }
 
 .container.hero {
   display: flex;
   gap: var(--space-8);
-  align-items: center;
+  align-items: flex-start; /* texte aligné en haut */
+  width: 100%;
 }
 
 .hero-left {
   flex: 1;
-  max-width: 600px; /* limite la largeur pour le texte */
+  max-width: 600px; /* limite largeur texte */
 }
 
-/* Chatbox + avatar */
 .side-card-wrapper {
   position: absolute;
-  top: 40px;       /* distance par rapport au top du hero */
-  right: 0;        /* toujours aligné à droite */
+  top: 20px;       /* juste sous navbar */
+  right: 20px;     /* distance du bord droit */
   display: flex;
-  flex-direction: column; /* empile avatar + chatbox */
-  align-items: flex-start; /* alignement gauche des éléments à l'intérieur */
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-2);
 }
 
@@ -48,9 +49,9 @@
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--color-border);
-  width: 280px;       /* taille fixe */
-  max-width: 100%;    /* responsive */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* effet léger de chatbox */
+  width: 280px;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Texte hero */
