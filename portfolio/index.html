@@ -1,156 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Metrey OM — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metrey OM – Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS ORDER (important) -->
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/buttons.css">    <!-- <— NOUVEAU -->
-  <link rel="stylesheet" href="assets/css/components.css">
-
-  <!-- JS global modal -->
-  <script defer src="assets/js/modal.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/buttons.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
+  <!-- ===========================
+       HEADER
+  ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <div class="brand">Metrey OM</div>
+      <!-- LOGO -->
+      <a href="#" class="logo">
+        <img src="assets/logo_mo_medium_black.svg" alt="Metrey OM" class="logo-img">
+      </a>
 
-    <nav class="site-nav">
-      <a class="navlink" href="#projects">Selected works</a>
-      <a class="navlink" href="about.html">About</a>
-    </nav>
+      <!-- NAV -->
+      <nav class="site-nav" id="mainNav">
+        <a href="#projects" class="navlink">Selected works</a>
+        <a href="#about" class="navlink">About</a>
+      </nav>
 
-    <div class="header-ctas">
-      <button class="btn btn--primary black js-open-modal">Get in touch</button>
-      <button class="hamburger" id="hamb">☰</button>
-    </div>
-
-  </div>
-</header>
-
-
-<!-- HERO -->
-<section class="hero-wrap">
-  <div class="container hero">
-
-    <div class="hero-left">
-
-      <!-- Tagline -->
-      <p class="tagline">Hi, I'm Metrey</p>
-
-      <!-- Title -->
-      <h1 class="h1">
-        Designer qui réconcilie<br>humains et systèmes
-      </h1>
-
-      <!-- Lead -->
-      <p class="lead">
-        J’aime créer des choses belles et utiles, qui rendent la vie un peu plus simple 
-        pour celles et ceux qui les utilisent. Mais surtout, je suis obsédée par l’idée 
-        de transformer des logiques structurelles complexes en solutions claires, 
-        concrètes et humaines.
-      </p>
-
-      <!-- CTAs -->
-      <div class="row" style="margin-top: var(--space-6);">
-        <a class="btn btn--primary black" href="#projects">Voir mon travail</a>
-        <button class="btn btn--secondary black js-open-modal">Contacte-moi</button>
+      <!-- CTAS -->
+      <div class="header-ctas">
+        <button class="btn btn--primary-black" id="openContact">Get in touch</button>
+        <button class="hamburger" id="navToggle">☰</button>
       </div>
 
     </div>
+  </header>
 
-    <!-- Side card -->
-    <aside class="hero-side">
-      <div class="side-card">
 
-        <div class="side-card-header">
-          <img src="https://via.placeholder.com/48" alt="avatar" class="side-avatar">
-        </div>
-
-        <p class="side-message">
-          Actuellement disponible pour de nouveaux projets 👋
+  <!-- ===========================
+       HERO
+  ============================ -->
+  <section class="hero-wrap">
+    <div class="container hero">
+      <div class="hero-left">
+        <p class="tagline">Product & Service Designer</p>
+        <h1 class="h1">I design digital public services that work for everyone</h1>
+        <p class="lead">
+          Structuration de parcours complexes, discovery, design de services, UI systémique.
         </p>
-
+        <button class="btn btn--primary-black" id="openContact2">Let’s work together</button>
       </div>
-    </aside>
 
+      <div class="hero-side">
+        <div class="side-card">
+          <div class="avatar"></div>
+          <div>
+            <strong>Based in Paris</strong><br>
+            Available for freelance
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       PROJECTS
+  ============================ -->
+  <section class="container projects" id="projects">
+
+    <!-- Card 1 -->
+    <article class="card">
+      <div class="cover">
+        <span>Placeholder image</span>
+      </div>
+      <div class="card-body">
+        <p class="meta">Université PSL — Lead Product Designer</p>
+        <h2 class="h2">Refonte de l’écosystème numérique des étudiants</h2>
+        <p class="lead">Unifier les portails, clarifier l’information, structurer les usages.</p>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <div class="cover">
+        <span>Placeholder image</span>
+      </div>
+      <div class="card-body">
+        <p class="meta">Service Public</p>
+        <h2 class="h2">Simplifier l’accès aux aides sociales</h2>
+        <p class="lead">Recherche terrain, cartographie service, prototypes UI.</p>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <div class="cover">
+        <span>Placeholder image</span>
+      </div>
+      <div class="card-body">
+        <p class="meta">Startup</p>
+        <h2 class="h2">Outil métier — optimisation des workflows</h2>
+        <p class="lead">Structuration complexe + craft UI avancé.</p>
+      </div>
+    </article>
+
+  </section>
+
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <p class="caption">© 2025 Metrey OM</p>
+
+      <!-- Signature icons -->
+      <div class="footer-icons">
+        <img src="assets/icon_small_cloud.svg" alt="">
+        <img src="assets/icon_small_star.svg" alt="">
+        <img src="assets/icon_small_clover.svg" alt="">
+        <img src="assets/icon_small_sun.svg" alt="">
+        <img src="assets/icon_small_flower.svg" alt="">
+      </div>
+
+      <div class="footer-links">
+        <a href="#" class="btn btn--tertiary-black">CV</a>
+        <a href="mailto:contact@metrey.fr" class="btn btn--tertiary-black">Email</a>
+        <a href="https://www.linkedin.com/" class="btn btn--tertiary-black">LinkedIn</a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===========================
+       MODAL CONTACT
+  ============================ -->
+  <div class="modal" id="contactModal">
+    <div class="backdrop" id="closeModal"></div>
+
+    <div class="modal-card">
+      
+      <div class="modal-left">
+        <div class="placeholder"></div>
+      </div>
+
+      <div class="modal-right">
+        <button class="modal-close" id="closeModalBtn">×</button>
+
+        <h2 class="h2">Travaillons ensemble</h2>
+        <p class="lead">Discutons de vos besoins produit, service ou UI.</p>
+
+        <div class="modal-ctas">
+          <a href="mailto:contact@metrey.fr" class="btn btn--primary-black">Envoyer un mail</a>
+          <a href="#" class="btn btn--secondary-black">Réserver un meeting</a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</section>
 
 
-<!-- PROJECTS -->
-<section id="projects" class="projects container">
+  <!-- ===========================
+       JS (mobile nav + modal)
+  ============================ -->
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
 
-  <article class="card">
-    <div class="cover">Image placeholder — Projet 1</div>
+    navToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("nav-open");
+    });
 
-    <div class="card-body">
-      <h3>Unifier un écosystème multi-usagers</h3>
-      <p class="caption">Product · UX · UI · Stratégie</p>
-      <p class="lead">Cadrage, discovery, prototypage et déploiement.</p>
+    // Modal
+    const modal = document.getElementById("contactModal");
+    const openBtns = [document.getElementById("openContact"), document.getElementById("openContact2")];
+    const closeBtns = [document.getElementById("closeModal"), document.getElementById("closeModalBtn")];
 
-      <a class="btn btn--secondary black" href="#">Voir le cas</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="cover">Image placeholder — Projet 2</div>
-
-    <div class="card-body">
-      <h3>Fluidifier l’accès aux aides sociales</h3>
-      <p class="caption">Service design · Recherche</p>
-      <p class="lead">Réduction des frictions et coordination multi-acteurs.</p>
-
-      <a class="btn btn--secondary black" href="#">Voir le cas</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="cover">Image placeholder — Projet 3</div>
-
-    <div class="card-body">
-      <h3>Dashboard interne — optimisation des workflows</h3>
-      <p class="caption">Product · UI</p>
-      <p class="lead">Composants UI, états, flows pour usages internes.</p>
-
-      <a class="btn btn--secondary black" href="#">Voir le cas</a>
-    </div>
-  </article>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer container">
-  <div>© 2025 Metrey OM</div>
-
-  <div class="row">
-    <a class="btn btn--tertiary black" href="#">CV</a>
-    <a class="btn btn--tertiary black" href="mailto:hello@example.com">Email</a>
-    <a class="btn btn--tertiary black" href="#">LinkedIn</a>
-  </div>
-</footer>
-
-
-<!-- Mobile Nav JS -->
-<script>
-  const hamb = document.getElementById('hamb');
-  const nav = document.querySelector('.site-nav');
-
-  hamb.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-</script>
+    openBtns.forEach(btn => btn.addEventListener("click", () => modal.classList.add("show")));
+    closeBtns.forEach(btn => btn.addEventListener("click", () => modal.classList.remove("show")));
+  </script>
 
 </body>
 </html>
