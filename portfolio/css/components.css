@@ -55,6 +55,12 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.hero-ctas {
+  display: flex;
+  gap: var(--space-4); /* ou --space-3 si tu veux plus serré */
+  margin-top: var(--space-5);
+}
+
 /* Texte hero */
 .tagline {
   margin-top: 60px; /* espace si nécessaire pour pas chevaucher la chatbox */
