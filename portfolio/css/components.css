@@ -167,14 +167,14 @@
   background: var(--color-greyscale-200);
 }
 
-@media (max-width: 900px) {
+@media (min-width: 901px) {
   .modal-right {
   width: 60%;
-  padding: var(--space-5);
+  padding: var(--space-8);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
   }
 }
 
