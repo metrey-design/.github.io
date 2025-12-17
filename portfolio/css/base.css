@@ -156,8 +156,8 @@ body {
 
 .footer {
   width: 100%;
-  border-top: 1px solid var(--color-border);
-  padding: var(--space-8) 0; /* vertical only */
+  padding: var(--space-6) 0; /* vertical only */
+  padding-top: 128px;
 }
 
 .footer-inner {
@@ -169,10 +169,11 @@ body {
 .footer-icons {
   display: flex;
   gap: var(--space-4);
+  height: 16px;
 }
 
 .f-icon {
-  width: 10px;   /* requested size */
-  height: 10px;
+  width: 100%;   /* requested size */
+  height: auto;
   display: block;
 }
